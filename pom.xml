@@ -54,19 +54,19 @@
            				</property>
            				<property>
               				<name>email</name>
-           					<value>revat.dominique@hotmail.com</value>
+           					<value>XXX</value>
            				</property>
            				<property>
               				<name>password</name>
-           					<value>revat123</value>
+           					<value>XXX</value>
            				</property>
            				<property>
               				<name>key</name>
-           					<value>Test Analyst</value>
+           					<value>XXX</value>
            				</property> 
            				<property>
               				<name>country</name>
-           					<value>France</value>
+           					<value>XXX</value>
            				</property>           				
        				</systemProperties>
        			</configuration>

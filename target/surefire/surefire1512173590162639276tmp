@@ -1,0 +1,10 @@
+#surefire
+#Thu Dec 14 13:43:28 CET 2017
+url=http\://www.linkedin.com
+email=revat.dominique@hotmail.com
+password=revat123
+user.dir=C\:\\workspace\\WebDriverTest
+key=Test Analyst
+localRepository=C\:\\WINDOWS\\system32\\config\\systemprofile\\.m2\\repository
+country=France
+basedir=C\:\\workspace\\WebDriverTest

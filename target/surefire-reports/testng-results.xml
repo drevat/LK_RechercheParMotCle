@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="215109" started-at="2017-12-14T12:43:31Z" finished-at="2017-12-14T12:47:06Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="215109" started-at="2017-12-14T12:43:31Z" finished-at="2017-12-14T12:47:06Z">
+      <class name="example.NewTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:example.NewTest@5fc7f7]" name="beforeTest" is-config="true" duration-ms="15180" started-at="2017-12-14T13:43:31Z" finished-at="2017-12-14T13:43:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="Connexion_HomePage(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:example.NewTest@5fc7f7]" name="Connexion_HomePage" duration-ms="39257" started-at="2017-12-14T13:43:46Z" finished-at="2017-12-14T13:44:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://www.linkedin.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[revat.dominique@hotmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[revat123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Test Analyst]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Connexion_HomePage -->
+        <test-method status="PASS" signature="DoSearch(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:example.NewTest@5fc7f7]" name="DoSearch" duration-ms="22497" started-at="2017-12-14T13:44:26Z" finished-at="2017-12-14T13:44:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://www.linkedin.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[revat.dominique@hotmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[revat123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Test Analyst]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[France]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DoSearch -->
+        <test-method status="PASS" signature="ListResult(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:example.NewTest@5fc7f7]" name="ListResult" duration-ms="138102" started-at="2017-12-14T13:44:48Z" finished-at="2017-12-14T13:47:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://www.linkedin.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[revat.dominique@hotmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[revat123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Test Analyst]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[France]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ListResult -->
+      </class> <!-- example.NewTest -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>

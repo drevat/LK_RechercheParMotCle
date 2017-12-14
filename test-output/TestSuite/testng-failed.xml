@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [TestSuite]">
+  <parameter name="country" value="France"/>
+  <parameter name="password" value="revat123"/>
+  <parameter name="url" value="https://www.guru99.com/maven-jenkins-with-selenium-complete-tutorial.html"/>
+  <parameter name="email" value="revat.dominique@hotmail.com"/>
+  <parameter name="key" value="Test Analyst"/>
+  <test name="testLogIn(failed)">
+    <classes>
+      <class name="example.NewTest">
+        <methods>
+          <include name="testEasy" invocation-numbers="0"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- example.NewTest -->
+    </classes>
+  </test> <!-- testLogIn(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->

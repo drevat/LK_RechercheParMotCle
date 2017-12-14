@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="TestSuite" thread-count="1" >
-	<parameter name="url" value="https://www.guru99.com/maven-jenkins-with-selenium-complete-tutorial.html" />
-	<parameter name="email" value="revat.dominique@hotmail.com" />
-	<parameter name="password" value="revat123" />
-	<parameter name="key" value="Test Analyst" />
-	<parameter name="country" value="France" />
+	<parameter name="url" value="https://www.linkedin.com" />
+	<parameter name="email" value="XXX" />
+	<parameter name="password" value="XXX" />
+	<parameter name="key" value="XXX" />
+	<parameter name="country" value="XXX" />
 	<test name="testLogIn">
 		<classes>
 			<class name="example.NewTest">

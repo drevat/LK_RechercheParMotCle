@@ -18,14 +18,13 @@ import org.apache.poi.ss.usermodel.VerticalAlignment;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-
-/** LE LIEN CLIQUABLE DU FICHIER EXCEL ME DONNE UN MESSAGE D'ERREUR : RESTRICTION EN VIGUEUR SUR CET ORDINATEUR */
 
 public class ResultLinkedIn {
 
@@ -67,13 +66,11 @@ public class ResultLinkedIn {
 
 	public void ResultList(WebDriver driver, String key) throws InterruptedException{
 	
-		// A Modifier
 		String FILE_NAME = System.getProperty("user.dir")+"\\Extracts\\"+date+"_LK_"+key+".xls";
 		
-        HSSFWorkbook workbook = new HSSFWorkbook();
-        // Setting cell style 
+        HSSFWorkbook workbook = new HSSFWorkbook(); 
         HSSFSheet sheet = workbook.createSheet("Resultat LinkedIn");
-
+        //variable de controle fin de page résultat 1= encore des pages, 0= plus de page
         int nbpage=1;
 
 		this.SetResult(driver);
@@ -113,13 +110,14 @@ public class ResultLinkedIn {
         Cell cellTitre4 = row.createCell(3); 
     		 cellTitre4.setCellValue("URL PROFIL");
     		 cellTitre4.setCellStyle(style);
+    		 
 // Boucle de parcours des pages + actions a réaliser.     		 
 		do{
 			js.executeScript("window.scrollTo(0,500)");
 			js.executeScript("window.scrollTo(0,1000)");	
 			js.executeScript("window.scrollTo(0,1500)");	
 			Thread.sleep(2000);
-			
+	
 			int nb = personneFactory.size();
 		//	System.out.println("Nombre de personneFactory: "+nb);
 			nb = nomFactory.size();
@@ -128,39 +126,47 @@ public class ResultLinkedIn {
 		//	System.out.println("Nombre de urlFactory: "+nb);
 
 	   //     System.out.println("Writing in Excel");
-        	
+        	 
             for (int i=0;i<nb;i++) {
             	Row row2 = sheet.createRow(rowNum);
             	for(int a=0;a<nb;a++){
             		int colNum = 0;
+            		
             		Cell cell1 = row2.createCell(colNum);           
             		cell1.setCellValue(nomFactory.get(i).getText());
             		sheet.autoSizeColumn(colNum, true);
             		colNum++;
+            		
             		Cell cell2 = row2.createCell(colNum);
             		cell2.setCellValue(fonctionFactory.get(i).getText());
             		sheet.autoSizeColumn(colNum, true);
             		colNum++;
+            		
             		Cell cell3 = row2.createCell(colNum);
             		cell3.setCellValue(regionFactory.get(i).getText());
             		sheet.autoSizeColumn(colNum, true);
             		colNum++;
+            		
             		Cell cell4 = row2.createCell(colNum);
             		cell4.setCellValue(urlFactory.get(i).getAttribute("href"));
             		sheet.autoSizeColumn(colNum, true);
                 }
 
             	rowNum++;
-            //	System.out.println(nomFactory.get(i).getText()+"\t");
-            //	System.out.println(urlFactory.get(i).getAttribute("href"));
-	
 	        }
             //System.out.println("Done");
 			Thread.sleep(1000);
-			driver.findElement(By.className("next")).click();
 			nbpage++;
-		}while(driver.findElement(By.className("next"))!= null);
-		//while (nbpage<=2);		
+			
+			try{
+				driver.findElement(By.className("next")).click();
+				nbpage=1;
+			}catch (NoSuchElementException e){
+				nbpage=0;
+			}
+			
+		}while (nbpage==1);		
+		
 	try {
 		 sheet.setAutoFilter(CellRangeAddress.valueOf("A1:D1"));
 	       FileOutputStream outputStream = new FileOutputStream(FILE_NAME);

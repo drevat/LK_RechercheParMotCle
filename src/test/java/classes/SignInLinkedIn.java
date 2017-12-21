@@ -8,11 +8,13 @@ import org.openqa.selenium.support.PageFactory;
 public class SignInLinkedIn {
 
 	 WebDriver driver;
-	 //Page Factory: Définition des element HTML utilisé
+
 	 @FindBy(id="login-email")
 	 WebElement emailFactory;
+	 
 	 @FindBy(id="login-password")
 	 WebElement passwordFactory;
+	 
 	 @FindBy(id="login-submit")
 	 WebElement btnLoginFactory;
 	 

@@ -8,9 +8,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.AfterTest;
-import org.apache.poi.ss.usermodel.Row;
-
 import classes.ResultLinkedIn;
 import classes.SearchLinkedIn;
 import classes.SignInLinkedIn;
@@ -47,6 +44,7 @@ public class NewTest {
 	 }
 
  
+	@SuppressWarnings("deprecation")
 	@BeforeTest
 	public void beforeTest(){
 		System.setProperty("webdriver.gecko.driver","C:\\geckodriver-v0.19.0-win64\\geckodriver.exe");
